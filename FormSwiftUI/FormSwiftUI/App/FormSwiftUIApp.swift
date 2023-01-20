@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct FormSwiftUIApp: App {
-    var body: some Scene {
-        WindowGroup {
-            FormView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      FormView()
     }
+  }
 }

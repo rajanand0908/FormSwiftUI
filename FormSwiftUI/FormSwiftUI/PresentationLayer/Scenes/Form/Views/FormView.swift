@@ -8,13 +8,44 @@
 import SwiftUI
 
 struct FormView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  
+  @State private var firstName = ""
+  @State private var lastName = ""
+  @State private var dateOfBirth = Date()
+  @State private var subscribeNotifications = false
+  @State private var numberOfLikes = 1
+  
+  var body: some View {
+    NavigationView {
+      Form {
+        Section("Personal Information") {
+          TextField("First Name",
+                    text: $firstName)
+          TextField("Last Name",
+                    text: $lastName)
+          DatePicker("Date of birth",
+                     selection: $dateOfBirth,
+                     displayedComponents: .date)
+        }
+        
+        Section("Actions") {
+          Toggle("Subscribe Notifications",
+                 isOn: $subscribeNotifications)
+            .toggleStyle(SwitchToggleStyle(tint: .blue))
+          Stepper("Number of likes", value: $numberOfLikes, in: 1...1000)
+          Text("This video has \(numberOfLikes) likes")
+          // TODO: Add actual url
+          Link("Terms of services", destination: URL(string: "https://google.com")!)
+        }
+      }
+      .navigationTitle("Account")
     }
+    .accentColor(.blue)
+  }
 }
 
 struct FormView_Previews: PreviewProvider {
-    static var previews: some View {
-        FormView()
-    }
+  static var previews: some View {
+    FormView()
+  }
 }
