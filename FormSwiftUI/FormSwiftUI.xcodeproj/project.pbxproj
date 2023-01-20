@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		BEB94402297AD50F00E5C0E6 /* FormSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB94401297AD50F00E5C0E6 /* FormSwiftUIApp.swift */; };
-		BEB94404297AD50F00E5C0E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB94403297AD50F00E5C0E6 /* ContentView.swift */; };
 		BEB94406297AD51200E5C0E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB94405297AD51200E5C0E6 /* Assets.xcassets */; };
 		BEB94409297AD51200E5C0E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEB94408297AD51200E5C0E6 /* Preview Assets.xcassets */; };
+		BEB94435297ADCEF00E5C0E6 /* FormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB94434297ADCEF00E5C0E6 /* FormView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,11 +33,11 @@
 /* Begin PBXFileReference section */
 		BEB943FE297AD50F00E5C0E6 /* FormSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FormSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB94401297AD50F00E5C0E6 /* FormSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormSwiftUIApp.swift; sourceTree = "<group>"; };
-		BEB94403297AD50F00E5C0E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BEB94405297AD51200E5C0E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEB94408297AD51200E5C0E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BEB9440E297AD51200E5C0E6 /* FormSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB94418297AD51200E5C0E6 /* FormSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FormSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEB94434297ADCEF00E5C0E6 /* FormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +86,8 @@
 		BEB94400297AD50F00E5C0E6 /* FormSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				BEB94401297AD50F00E5C0E6 /* FormSwiftUIApp.swift */,
-				BEB94403297AD50F00E5C0E6 /* ContentView.swift */,
+				BEB9442B297ADC7A00E5C0E6 /* App */,
+				BEB9442C297ADC8400E5C0E6 /* PresentationLayer */,
 				BEB94405297AD51200E5C0E6 /* Assets.xcassets */,
 				BEB94407297AD51200E5C0E6 /* Preview Content */,
 			);
@@ -100,6 +100,46 @@
 				BEB94408297AD51200E5C0E6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BEB9442B297ADC7A00E5C0E6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BEB94401297AD50F00E5C0E6 /* FormSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BEB9442C297ADC8400E5C0E6 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9442D297ADC9300E5C0E6 /* Scenes */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		BEB9442D297ADC9300E5C0E6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9442E297ADC9B00E5C0E6 /* Form */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BEB9442E297ADC9B00E5C0E6 /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9442F297ADCB600E5C0E6 /* Views */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		BEB9442F297ADCB600E5C0E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BEB94434297ADCEF00E5C0E6 /* FormView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEB94404297AD50F00E5C0E6 /* ContentView.swift in Sources */,
+				BEB94435297ADCEF00E5C0E6 /* FormView.swift in Sources */,
 				BEB94402297AD50F00E5C0E6 /* FormSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
