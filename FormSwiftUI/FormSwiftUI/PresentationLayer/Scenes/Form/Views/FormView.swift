@@ -31,7 +31,7 @@ struct FormView: View {
         Section("Actions") {
           Toggle("Subscribe Notifications",
                  isOn: $subscribeNotifications)
-            .toggleStyle(SwitchToggleStyle(tint: .blue))
+            .toggleStyle(SwitchToggleStyle(tint: .purple))
           Stepper("Number of likes", value: $numberOfLikes, in: 1...1000)
           Text("This video has \(numberOfLikes) likes")
           // TODO: Add actual url
@@ -39,8 +39,17 @@ struct FormView: View {
         }
       }
       .navigationTitle("Account")
+      .toolbar {
+        ToolbarItemGroup(placement: .navigationBarTrailing) {
+          Button {
+            hideKeyboard()
+          } label: {
+            Image(systemName: "keyboard.chevron.compact.down")
+          }
+        }
+      }
     }
-    .accentColor(.blue)
+    .accentColor(.purple)
   }
 }
 
@@ -49,3 +58,11 @@ struct FormView_Previews: PreviewProvider {
     FormView()
   }
 }
+
+#if canImport(UIKit)
+extension View {
+  func hideKeyboard() {
+    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+  }
+}
+#endif
