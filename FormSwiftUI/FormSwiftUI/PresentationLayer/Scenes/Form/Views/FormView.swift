@@ -46,11 +46,23 @@ struct FormView: View {
           } label: {
             Image(systemName: "keyboard.chevron.compact.down")
           }
+          
+          Button {
+            saveInformation()
+          } label: {
+            Text("Save")
+          }
         }
       }
     }
     .accentColor(.purple)
   }
+  
+  func saveInformation() {
+    // TODO: - Implement save information
+    print("Save Information")
+  }
+  
 }
 
 struct FormView_Previews: PreviewProvider {
